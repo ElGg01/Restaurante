@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="img/Icono-Reyna.png">
+  <link rel="stylesheet" href="css/galeria.css">
+  <title>Galeria</title>
+</head>
+<body>
+  <!-- BARRA DE NAVEGACION Y TITULAR -->
+  <header>
+    <!-- Barra de navegación -->
+    <nav>
+      <!-- Vinculos 1 -->
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html"><i class="fi fi-bs-crown"></i> Inicio</a></li>
+          <li><a href="comida.html"><i class="fi fi-sr-restaurant"></i> Comida</a></li>
+        </ul>
+        <!-- Logo del restaurante -->
+      </div>
+      <div id="logo">
+        <h1>Reyna</h1>
+        <i class="fi fi-bs-crown"></i>
+      </div>
+      <!-- Vinculos 2 -->
+      <div>
+        <ul class="nav-links">
+          <li><a href="galeria.html"><i class="fi fi-rs-gallery"></i> Galería</a></li>
+          <li><a href="promociones.html"><i class="fi fi-rr-badge-percent"></i> Promociones</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Titular -->
+    <div id="titular">
+      <h1>GALERÍA</h1>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- Definimos un contenedor para que ahi vayan todas las imagenes de nuestra galeria -->
+    <div id="galeria">
+      <!-- Ponemos un "a" para todas las imagenes para hacer un efecto con targets -->
+      <a href="#imagen1"><img src="img/pollo.jpg" alt=""></a>
+      <a href="#imagen2"><img src="img/pastel.jpg" alt=""></a>
+      <a href="#imagen3"><img src="img/salmon.jpg" alt=""></a>
+      <a href="#imagen4"><img src="img/restaurante.jpg" alt=""></a>
+      <a href="#imagen5"><img src="img/restaurante2.jpg" alt=""></a>
+      <a href="#imagen6"><img src="img/salmon2.jpg" alt=""></a>
+      <a href="#imagen7"><img src="img/postres.jpg" alt=""></a>
+      <a href="#imagen8"><img src="img/restaurante3.jpg" alt=""></a>
+      <a href="#imagen9"><img src="img/platillo-italiano.jpg" alt=""></a>
+      <a href="#imagen10"><img src="img/buffet.jpg" alt=""></a>
+    </div>
+    <!-- Definimos un contenedor para la imagen 1 especificamente -->
+    <div class="abrir-img" id="imagen1">
+      <!-- Flecha para ir a la img anterior -->
+      <a href="#imagen10" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <!-- Imagen -->
+      <img src="img/pollo.jpg" alt="">
+      <!-- Flecha para ir a la img siguiente -->
+      <a href="#imagen2" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <!-- Boton para cerrar el contenedor -->
+      <a href="#" class="cerrar">X</a>
+    </div>
+
+    <!-- Misma estructura del contenedor de arriba para todos los otros contenedores de abajo
+    que son los contenedores de cada imagen que esta en la galeria para hacer un efecto
+    con triggers para mostrar la imagen sin usar JS -->
+    
+    <div class="abrir-img" id="imagen2">
+      <a href="#imagen1" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/pastel.jpg" alt="">
+      <a href="#imagen3" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen3">
+      <a href="#imagen2" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/salmon.jpg" alt="">
+      <a href="#imagen4" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen4">
+      <a href="#imagen3" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/restaurante.jpg" alt="">
+      <a href="#imagen5" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen5">
+      <a href="#imagen4" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/restaurante2.jpg" alt="">
+      <a href="#imagen6" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen6">
+      <a href="#imagen5" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/salmon2.jpg" alt="">
+      <a href="#imagen7" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen7">
+      <a href="#imagen6" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/postres.jpg" alt="">
+      <a href="#imagen8" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen8">
+      <a href="#imagen7" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/restaurante3.jpg" alt="">
+      <a href="#imagen9" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen9">
+      <a href="#imagen8" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/platillo-italiano.jpg" alt="">
+      <a href="#imagen10" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+    <div class="abrir-img" id="imagen10">
+      <a href="#imagen9" class="flecha"><i class="fi fi-rr-arrow-small-left"></i></a>
+      <img src="img/buffet.jpg" alt="">
+      <a href="#imagen1" class="flecha"><i class="fi fi-rr-arrow-small-right"></i></a>
+      <a href="#" class="cerrar">X</a>
+    </div>
+  </main>
+
+  <!-- COMIENZO DEL PIE DE PAGINA -->
+  <footer>
+    <!-- Logo -->
+    <div id="logo-footer">
+      <img src="img/logo-reina-sin-fondo.png" alt="">
+    </div>
+    <!-- Datos -->
+    <div id="datos">
+      <h3>Julio  -  1559  -  Programación web</h3>
+    </div>
+    <!-- Leyenda -->
+    <h6>Esta página NO representa NINGÚN restaurante real, las imagenes son de libre uso y se usan sin fines de lucro.</h6>
+  </footer>
+</body>
+</html>

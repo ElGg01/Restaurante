@@ -1,0 +1,345 @@
+/* IMPORTACIONES */
+
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+/* Iconos importados */
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+
+/* ESTILOS GENERALES */
+
+/* Eliminación del estilo por default */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Se aplica la fuente Roboto a todo el Body para que todas las letras sean Roboto */
+body {
+  font-family: Roboto;
+}
+
+/* ESTILOS DEL NAVBAR */
+
+/* Estilos de la barra de navegacion usando flex para que los elementos vayan de forma horizontal */
+nav {
+  background-color: #0E1D48;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 5px 10%;
+  vertical-align: middle;
+}
+
+/* Estilos de los iconos de navegacion */
+nav i {
+  color: white;
+  vertical-align: middle;
+}
+
+/* Se quitan las viñetas de las listas */
+.nav-links {
+  list-style: none;
+}
+
+/* Ponemos los elementos en la misma linea y con un padding a los lados */
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+/* Definimos estilos para los "a" de la navegacion para  que no salgan morados y con subrayado */
+.nav-links a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Aplicamos un efecto para que cuando se pase el mouse aumenten los elementos */
+.nav-links li:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Cambiamos el color a dorado del icono cuando se pase el cursor sobre el elemento */
+.nav-links a:hover > i {
+  color: gold;
+}
+
+/* Cambiamos el color a dorado de las letras cuando se pase el cursor sobre el elemento */
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Estilos del logo del restaurante */
+#logo {
+  font-family: 'Playball', cursive;
+  font-size: 30px;
+  color: white;
+  cursor: default;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos de la corona del logo del restaurante */
+#logo i {
+  font-size: 20px;
+  position: absolute;
+  left: 84%;
+  top: 8%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Efecto para hacer que la corona del logo se haga un poco más grande al pasar el cursor */
+#logo:hover i {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  top: 3%;
+  color: gold;
+}
+
+/* Efecto para hacer que el texto del logo se haga un poco más grande al pasar el cursor */
+#logo:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+
+/* Damos estilo al titulo de lo que contiene la pagina */
+#titular {
+  text-align: center;
+  background-color: #7b3984;
+  color: white;
+}
+
+/* Margen al contenedor general de las comidas */
+.contenedor-comida {
+  margin: 25px 0;
+}
+
+/* Estilo de los titulos de los apartados de comida */
+.titulo-comida {
+  background-color: #feffc1;
+  text-align: center;
+  max-width: 80%;
+  margin: 15px auto 30px auto;
+  padding: 5px 0;
+  border-radius: 0 0 20px 20px;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  -ms-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* Aplicamos flex al contenedor de las comidas para que se acomoden horizontalmente */
+.comidas {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* Definimos el estilo de nuestras cards */
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: #d9d9d9;
+  margin: 20px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Definimos estilo para cuando se pase el mouse encima de la card */
+.card:hover {
+  border-radius: 50% 50% 0 0;
+  -webkit-border-radius: 50% 50% 0 0;
+  -moz-border-radius: 50% 50% 0 0;
+  -ms-border-radius: 50% 50% 0 0;
+  -o-border-radius: 50% 50% 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  background-image: linear-gradient( 0deg, #FDD819 10%, #E80505 100%);
+}
+
+/* Aplicamos estilos a la imagen de la tarjeta elevandola un poco entre otras cosas */
+.card img {
+  display: block;
+  width: 150px;
+  max-height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  bottom: 5%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transition: all  0.2s;
+  -webkit-transition: all  0.2s;
+  -moz-transition: all  0.2s;
+  -ms-transition: all  0.2s;
+  -o-transition: all  0.2s;
+}
+
+/* Volvemos a poner color a la imagen cuando se pase el cursor sobre ella */
+.card:hover img {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+/* Definimos estilos para el boton de la tarjeta */
+.card button {
+  display: block;
+  margin: auto;
+  padding: 5px 30%;
+  cursor: pointer;
+  border-radius: 0 0 20px 20px;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  -ms-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
+  border: none;
+  background-color: #0e1d48;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+/* Estilos del boton de la tarjeta para cuando se pase el mouse sobre el */
+.card button:hover {
+  box-shadow: rgba(255, 0, 0, 0.4) 0px 5px, rgba(255, 115, 0, 0.3) 0px 10px, rgba(252, 193, 0, 0.2) 0px 15px, rgba(255, 230, 0, 0.1) 0px 20px, rgba(255, 217, 0, 0.05) 0px 25px;
+}
+
+/* Damos estilo al titulo del platillo dentro de la tarjeta */
+.platillo {
+  text-align: center;
+  max-width: 95%;
+  margin: auto;
+  background-color: #d9d9d9;
+  border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
+}
+
+/* Cambiamos el estilo del titulo del platillo para cuando se pase el mouse sobre la tarjeta */
+.card:hover .platillo {
+  background-color: #64ffa7;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+/* Definimos estilos a las especificaciones del platillo */
+.especificaciones {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Damos estilo solo a los h3 de las especificaciones */
+.especificaciones h3 {
+  margin: 5px 0;
+}
+
+/* La clase precio es para dar el color verde a los precios */
+.precio {
+  color: green;
+}
+
+/* ESTILOS DEL FOOTER */
+
+/* Definimos el estilo del contenedor de pie de pagina */
+footer {
+  text-align: center;
+  background-color: #0E1D48;
+  color: white;
+  padding: 5px 5px 20px 5px;
+}
+
+/* Limitamos el alto del logo del footer */
+footer img {
+  height: 50px;
+}
+
+/* Aplicamos un efecto al pasar el cursor sobre el logo */
+footer img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Damos estilos a los datos del footer */
+#datos {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Media queries del responsive desing */
+
+/* RESPONSIVE DESING DEL NAVBAR Y FOOTER */
+@media screen and (max-width: 770px) {
+  #logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-links li {
+    font-size: 15px;
+  }
+
+  footer h3 {
+    font-size: 15px;
+  }
+
+  footer h6 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .nav-links li {
+    font-size: 12px;
+  }
+}

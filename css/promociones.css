@@ -1,0 +1,538 @@
+/* IMPORTACIONES */
+
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+/* Iconos importados */
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+
+/* ESTILOS GENERALES */
+
+/* Eliminación del estilo por default */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Se aplica la fuente Roboto a todo el Body para que todas las letras sean Roboto */
+body {
+  font-family: Roboto;
+}
+
+/* ESTILOS DEL NAVBAR */
+
+/* Estilos de la barra de navegacion usando flex para que los elementos vayan de forma horizontal */
+nav {
+  background-color: #0E1D48;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 5px 10%;
+  vertical-align: middle;
+}
+
+/* Estilos de los iconos de navegacion */
+nav i {
+  color: white;
+  vertical-align: middle;
+}
+
+/* Se quitan las viñetas de las listas */
+.nav-links {
+  list-style: none;
+}
+
+/* Ponemos los elementos en la misma linea y con un padding a los lados */
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+/* Definimos estilos para los "a" de la navegacion para  que no salgan morados y con subrayado */
+.nav-links a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Aplicamos un efecto para que cuando se pase el mouse aumenten los elementos */
+.nav-links li:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Cambiamos el color a dorado del icono cuando se pase el cursor sobre el elemento */
+.nav-links a:hover > i {
+  color: gold;
+}
+
+/* Cambiamos el color a dorado de las letras cuando se pase el cursor sobre el elemento */
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Estilos del logo del restaurante */
+#logo {
+  font-family: 'Playball', cursive;
+  font-size: 30px;
+  color: white;
+  cursor: default;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos de la corona del logo del restaurante */
+#logo i {
+  font-size: 20px;
+  position: absolute;
+  left: 84%;
+  top: 8%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Efecto para hacer que la corona del logo se haga un poco más grande al pasar el cursor */
+#logo:hover i {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  top: 3%;
+  color: gold;
+}
+
+/* Efecto para hacer que el texto del logo se haga un poco más grande al pasar el cursor */
+#logo:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+
+/* Estilo del encabezado principal */
+#titular {
+  text-align: center;
+  background-color: #7b3984;
+  color: white;
+}
+
+/* Usamos flex para el contenedor de cards para que se vayan acomodando horizontalmente */
+#contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo de la card */
+.card {
+  margin: 10px;
+  width: 250px;
+  height: 350px;
+  border-left: 2px solid #d9d9d9;
+  border-right: 2px solid #d9d9d9;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  overflow: hidden;
+}
+
+/* Efecto de sombra interior cuando se le haga hover a la card */
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Aplicamos una reduccion de escala a los descuentos para hacer un efecto cuando se pase el cursor
+sobre la card */
+.card:hover .descuentos{
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+/* Aplicamos flex para que los elementos del contenedor descuentos se vayan horizontalmente */
+.descuentos {
+  display: flex;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Aplicamos estilos a las letras dentro del contenedor descuentos */
+.descuentos p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Al lado izquierdo aplicamos un ancho del 50% del contenedor y un color de fondo */
+.izquierdo {
+  width: 50%;
+  height: 30px;
+  background-color: #0E1D48;
+}
+
+/* Al lado derecho aplicamos un ancho del 50% del contenedor y un color de fondo */
+.derecho {
+  width: 50%;
+  height: 30px;
+  background-color: #7b3984;
+}
+
+/* Aplicamos una animación a los textos de los encabezados dentro de las tarjetas para que palpiten */
+.derecho p {
+  animation: palpitar 0.5s linear infinite;
+  -webkit-animation: palpitar 0.5s linear infinite;
+}
+
+/* Aplicamos estilos a la imagen dentro de la card */
+.img-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Reducimos la escala y redondeamos los bordes cuando se pase el mouse sobre la card */
+.card:hover img {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+/* Damos un transition al contenido de la card para que sus cambios se hagan suavemente */
+.contenido-card {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Justificamos y damos margen a los "p" dentro del contenido-card */
+.contenido-card p {
+  text-align: justify;
+  margin: 0 5px;
+}
+
+/* /* Justificamos y damos margen a los "h3" dentro del contenido-card */ */
+.contenido-card h3 {
+  text-align: justify;
+  margin: 0 5px;
+}
+
+/* Aplicamos una reduccion de escala al contenido-card cuando se pase el cursor sobre la card */
+.card:hover .contenido-card {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+/* Aplicamos una reduccion de escala a los precios cuando se pase el cursor sobre la card */
+.card:hover .precios {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+/* Damos estilo a los precios justificando y dando un margen */
+.precios {
+  text-align: justify;
+  margin: 0 5px;
+  width: 50%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Damos estilo al contenedor del boton dentro de la card */
+.boton {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Estilizamos el boton de la card */
+.boton button {
+  padding: 5px 20px;
+  color: white;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Cambiamos el color del boton cuando se pase el cursor sobre el */
+.boton button:hover {
+  background-color: red;
+}
+
+/* Aplicamos la misma reduccion de escala cuando se pase el cursor sobre la card */
+.card:hover .boton {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+/* Al contenedor comprar le aplicamos flex para que sus elementos vayan horizontalmente */
+.comprar {
+  display: flex;
+}
+
+/* Aplicamos un estilo de letra mas ligero para el precio anterior */
+.antes {
+  font-weight: lighter;
+}
+
+/* Aplicamos una letra mas fuerte y cambiamos el color del precio nuevo */
+.nuevo {
+  font-weight: bolder;
+  color: blue;
+}
+
+/* Al contenedor del cupon que pasara de un lado a otro le pones un fondo morado y un color de letra blanco */
+#cupones {
+  background-color: #7b3984;
+  color: white;
+}
+
+/* Aplicamos un flex al contenedor de los cupones para que se vayan acomodando horizontalmente */
+#contenedor-cupones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Aplicamos estilo a los cupones como tal */
+.cupon {
+  width: 250px;
+  height: 120px;
+  background-color: #d9d9d9;
+  margin: 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border: 2px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: parpadeo-verde 1s linear infinite;
+  -webkit-animation: parpadeo-verde 1s linear infinite;
+  cursor: pointer;
+}
+
+/* Aumentamos la escala cuando se pase el cursor sobre un cupon */
+.cupon:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* Aplicamos animacion a el elemento h3 */
+.cupon h3 {
+  animation: parpadeo-rojo 1s linear infinite;
+  -webkit-animation: parpadeo-rojo 1s linear infinite;
+}
+
+/* Aplicamos animacion a el icono */
+.icono {
+  animation: rotar 1s alternate infinite;
+  -webkit-animation: rotar 1s alternate infinite;
+}
+
+/* Definimos el tamaño del icono */
+.icono i {
+  font-size: 20px;
+}
+
+/* ANIMACIONES */
+
+/* Creamos la animacion de palpitar que solo aumentara y disminuira la escala */
+@keyframes palpitar {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+/* Animacion de cambiar de negro a rojo */
+@keyframes parpadeo-rojo {
+  0% {
+    color: black;
+  }
+  50%{
+    color: red;
+  }
+  100% {
+    color: black;
+  }
+}
+
+/* Animacion de cambiar de negro a verde */
+@keyframes parpadeo-verde {
+  0% {
+    border: 2px dotted black;
+  }
+  50%{
+    border: 2px dotted #03f9ac;
+  }
+  100% {
+    border: 2px dotted black;
+  }
+}
+
+/* Animacion de girar para los iconos */
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+
+
+/* ESTILOS DEL FOOTER */
+
+/* Definimos el estilo del contenedor de pie de pagina */
+footer {
+  text-align: center;
+  background-color: #0E1D48;
+  color: white;
+  padding: 5px 5px 20px 5px;
+}
+
+/* Limitamos el alto del logo del footer */
+footer img {
+  height: 50px;
+}
+
+/* Aplicamos un efecto al pasar el cursor sobre el logo */
+footer img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Damos estilos a los datos del footer */
+#datos {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* RESPONSIVE DESING DEL NAVBAR Y FOOTER */
+@media screen and (max-width: 770px) {
+  #logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-links li {
+    font-size: 15px;
+  }
+
+  footer h3 {
+    font-size: 15px;
+  }
+
+  footer h6 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .nav-links li {
+    font-size: 12px;
+  }
+}

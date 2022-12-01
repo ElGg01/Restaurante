@@ -1,0 +1,349 @@
+/* IMPORTACIONES */
+
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+/* Iconos importados */
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+
+/* ESTILOS GENERALES */
+
+/* Eliminación del estilo por default */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Se aplica la fuente Roboto a todo el Body para que todas las letras sean Roboto */
+body {
+  font-family: Roboto;
+}
+
+/* ESTILOS DEL NAVBAR */
+
+/* Estilos de la barra de navegacion usando flex para que los elementos vayan de forma horizontal */
+nav {
+  background-color: #0E1D48;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 5px 10%;
+  vertical-align: middle;
+}
+
+/* Estilos de los iconos de navegacion */
+nav i {
+  color: white;
+  vertical-align: middle;
+}
+
+/* Se quitan las viñetas de las listas */
+.nav-links {
+  list-style: none;
+}
+
+/* Ponemos los elementos en la misma linea y con un padding a los lados */
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+/* Definimos estilos para los "a" de la navegacion para  que no salgan morados y con subrayado */
+.nav-links a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Aplicamos un efecto para que cuando se pase el mouse aumenten los elementos */
+.nav-links li:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Cambiamos el color a dorado del icono cuando se pase el cursor sobre el elemento */
+.nav-links a:hover > i {
+  color: gold;
+}
+
+/* Cambiamos el color a dorado de las letras cuando se pase el cursor sobre el elemento */
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Estilos del logo del restaurante */
+#logo {
+  font-family: 'Playball', cursive;
+  font-size: 30px;
+  color: white;
+  cursor: default;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos de la corona del logo del restaurante */
+#logo i {
+  font-size: 20px;
+  position: absolute;
+  left: 84%;
+  top: 8%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Efecto para hacer que la corona del logo se haga un poco más grande al pasar el cursor */
+#logo:hover i {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  top: 3%;
+  color: gold;
+}
+
+/* Efecto para hacer que el texto del logo se haga un poco más grande al pasar el cursor */
+#logo:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+
+/* Damos estilo al titulo de lo que sera el contenido de la pagina */
+#titular {
+  text-align: center;
+  background-color: #7b3984;
+  color: white;
+}
+
+/* Contenedor con grid para ajustar las imagenes en columnas */
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 95%;
+  margin: auto;
+  gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* Estilos para las imagenes */
+#galeria img {
+  width: 100%;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Damos estilo a el "a" de las imagenes (ya que estan adentro) */
+#galeria a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Damos un efecto para cuando se pase el mouse encima de las imagenes */
+#galeria a:hover img {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+
+/* Definimos una clase para cuando se habra una imagen aplique estos efectos, es decir cuando se le de
+clic, esto funcionara debido a que estamos usando target para que cuando se seleccione un elemento se
+ejecuten ciertos estilos usando la propiedad "target" para crear la ilusion de que se abre la imagen y podemos navegar entre ellas con flechas sin usar JS */
+
+/* Por defecto los divs de cada imagen estan con escala de 0, para que cuando se les de clic se cambie
+a una escala de 1 y entonces mostrar la imagen mas grande */
+.abrir-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+/* Damos estilos a la imagen para cuando este abierta */
+.abrir-img img {
+  object-fit: cover;
+  width: 75vw;
+  max-height: 70vh;
+}
+
+/* Definimos que cuando se le de clic a una imagen (sera targeteada) se aplique una escala de 1
+a la clase, por lo que se harán visibles los divs que pusimos abajo de la galeria en si de acuerdo
+a que imagen (id) se haya presionado */
+.abrir-img:target {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+/* damos estilos al boton de cerrar, que lo que hace es targetear a "#", por lo que es como si no estuviera
+nada seleccionado y se cerraran los divs que pusimos abajo de la galeria */
+.cerrar {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: #0E1D48;
+  color: white;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-weight: bold;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+/* Damos efecto para cuando pasemos el cursor por el boton de cerrar */
+.cerrar:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Definimos los estilos de las flechas que sirven para cambiar de imagen targeteando a los divs de cada imagen en particular, haciendo que aparezcan y desaparezcan respectivamente */
+.flecha {
+  font-size: 30px;
+  display: block;
+  background-color: #0E1D48;
+  color: white;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* ESTILOS DEL FOOTER */
+
+/* Definimos el estilo del contenedor de pie de pagina */
+footer {
+  text-align: center;
+  background-color: #0E1D48;
+  color: white;
+  padding: 5px 5px 20px 5px;
+}
+
+/* Limitamos el alto del logo del footer */
+footer img {
+  height: 50px;
+}
+
+/* Aplicamos un efecto al pasar el cursor sobre el logo */
+footer img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* Damos estilos a los datos del footer */
+#datos {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* RESPONSIVE DESING DEL NAVBAR Y FOOTER */
+@media screen and (max-width: 770px) {
+  #logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-links li {
+    font-size: 15px;
+  }
+
+  footer h3 {
+    font-size: 15px;
+  }
+
+  footer h6 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .nav-links li {
+    font-size: 12px;
+  }
+}
+
+/* ESTILOS PROPIOS DE GALERIA */
+
+/* Responsive del grid y el boton de cerrar */
+@media screen and (max-width: 600px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cerrar {
+    top: 150px;
+    right: 40px;
+  }
+}
